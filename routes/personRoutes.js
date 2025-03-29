@@ -10,8 +10,8 @@ const router = express.Router();
 // route handler for post request to database
 router.post("/person", async (req, res) => {
   try {
-    const { name, email } = req.body; // access pares request body
-    const person = new personModel({ name, email }); // create new instance of data
+    const { name, email, password } = req.body; // access pares request body
+    const person = new personModel({ name, email, password }); // create new instance of data
     await person.save(); // save data to the database
     res.status(201).json({ message: "Data Received" });
   } catch (err) {

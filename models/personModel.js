@@ -11,7 +11,12 @@ const personSchema = new mongoose.Schema({
     type: String,
     required: true,
     unique: true,
-  }
+  },
+  password: {
+    type: String,
+    required: true,
+    unique: true,
+  },
 });
 
 // define model
